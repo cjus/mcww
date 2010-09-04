@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mcww version="1.0">
+	<testcase description="TCP Ping Test">
+		<threads>
+			<count>10</count>
+			<iterations>100</iterations>
+			<delay>0</delay>
+			<timeout>10</timeout>
+		</threads>	
+		<message tcp="true" http="false">
+			<command>MC.PING</command>
+			<address>192.168.1.102</address>
+			<port>3400</port>
+			<payload mimetype="image/gif">
+				<base64></base64>
+			</payload>
+		</message>
+	</testcase>
+	
+	<testcase description="UDP Ping Test">
+		<threads>
+			<count>10</count>
+			<iterations>100</iterations>
+			<delay>0</delay>
+			<timeout>10</timeout>
+		</threads>	
+		<message tcp="false" http="false">
+			<command>MC.PING</command>
+			<address>192.168.1.102</address>
+			<port>3401</port>
+			<payload mimetype="image/gif">
+				<base64></base64>
+			</payload>
+		</message>
+	</testcase>
+
+	<testcase description="HTTP Test">
+		<threads>
+			<count>10</count>
+			<iterations>100</iterations>
+			<delay>0</delay>
+			<timeout>10000</timeout>
+		</threads>	
+		<message tcp="true" http="true">
+			<address>http://192.168.1.102:3400</address>
+		</message>
+	</testcase>
+
+	<testcase description="DistributedChess.net">
+		<threads>
+			<count>1</count>
+			<iterations>1</iterations>
+			<delay>0</delay>
+			<timeout>10000</timeout>
+		</threads>	
+		<message tcp="true" http="true">
+			<address>http://DistributedChess.net</address>
+		</message>
+	</testcase>
+
+</mcww>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<mcww version="1.0">
+  <testcase description=" Servant Tester">
+    <threads>
+      <count>64</count>
+      <iterations>1000</iterations>
+      <delay>0</delay>
+      <timeout>300000</timeout>
+    </threads>
+    <message protocol="TCP/HTTP-POST">
+      <command>http://192.168.1.46:3400</command>
+      <headers>Connection: close|</headers>
+      <address>192.168.1.46</address>
+      <port>3400</port>
+      <payload mimetype="text/xml">
+        <base64>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiID8+DQo8bWN3dyB2ZXJzaW9uPSIxLjAiPg0KCTx0ZXN0Y2FzZSBkZXNjcmlwdGlvbj0iSUlTIExvY2FsaG9zdCB0ZXN0Ij4NCgkJPHRocmVhZHM+DQoJCQk8Y291bnQ+MjA8L2NvdW50Pg0KCQkJPGl0ZXJhdGlvbnM+MTAwPC9pdGVyYXRpb25zPg0KCQkJPGRlbGF5PjA8L2RlbGF5Pg0KCQkJPHRpbWVvdXQ+MjA8L3RpbWVvdXQ+DQoJCTwvdGhyZWFkcz4JDQoJCTxtZXNzYWdlIHRjcD0idHJ1ZSIgaHR0cD0idHJ1ZSI+DQoJCQk8YWRkcmVzcz5odHRwOi8vbG9jYWxob3N0L3d3d3Rlc3QvPC9hZGRyZXNzPg0KCQk8L21lc3NhZ2U+DQoJPC90ZXN0Y2FzZT4NCg0KPC9tY3d3Pg0K</base64>
+      </payload>
+    </message>
+  </testcase>
+</mcww>
